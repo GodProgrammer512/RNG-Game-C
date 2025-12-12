@@ -10,13 +10,13 @@
 #include <time.h>
 
 /* Global variables: */
-static long double all_attempts = 0.0L;
-static long double wins = 0.0L;
-static long double loses = 0.0L;
+static long double all_attempts = 0.0L; /* All attempts variable. */
+static long double wins = 0.0L;         /* All wins variable.     */
+static long double loses = 0.0L;        /* All loses variable.    */
 
 /* Functions prototype: */
-static void save_data(); /* Save game data function. */
-static void load_data(); /* Load game data function. */
+static void save_data();                /* Save game data function. */
+static void load_data();                /* Load game data function. */
 
 /* Main code: */
 int main()
@@ -227,6 +227,7 @@ static void save_data()
 static void load_data()
 {
 	FILE *statistics = fopen("data/statistics.csv", "r");
+
 	if(!statistics)
 	{
 		save_data();
