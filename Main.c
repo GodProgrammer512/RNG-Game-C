@@ -3,7 +3,6 @@
 #define _RNG_GAME_C_
 
 /* Importations: */
-#define IMPORT_TERMINAL_COLORS
 #include <cutils.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -11,13 +10,13 @@
 #include <time.h>
 
 /* Global variables: */
-long double all_attempts = 0.0L;
-long double wins = 0.0L;
-long double loses = 0.0L;
+static long double all_attempts = 0.0L;
+static long double wins = 0.0L;
+static long double loses = 0.0L;
 
 /* Functions prototype: */
-static void save_data();
-static void load_data();
+static void save_data(); /* Save game data function. */
+static void load_data(); /* Load game data function. */
 
 /* Main code: */
 int main()
@@ -26,10 +25,10 @@ int main()
 	srand((unsigned)(time(NULL)));
 
 	/* RNG Game version variables: */
-	#define RNG_GAME_FULL_VERSION  300.0L /* RNG Game full version variable (3.0.0).  */
+	#define RNG_GAME_FULL_VERSION  301.0L /* RNG Game full version variable (3.0.0).  */
 	#define RNG_GAME_MAJOR_VERSION 3.0L   /* RNG Game major version variable (3).     */
 	#define RNG_GAME_MINOR_VERSION 0.0L   /* RNG Game minor version variable (0).     */
-	#define RNG_GAME_PATCH_VERSION 0.0L   /* RNG Game patch version variable (0).     */
+	#define RNG_GAME_PATCH_VERSION 1.0L   /* RNG Game patch version variable (0).     */
 
 	/* Main variables: */
 	#define MIN                    0      /* Minimum value variable.                  */
